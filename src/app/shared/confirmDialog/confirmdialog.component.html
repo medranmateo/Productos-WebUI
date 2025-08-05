@@ -1,0 +1,13 @@
+<div class="confirm-dialog">
+  <h1 mat-dialog-title>{{ title }}</h1>
+
+  <mat-dialog-content>
+    <p>{{message}}</p>
+    <p> ¿Desea Continuar?</p>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="center">
+  <button matButton class="btn-cancelar " mat-dialog-close>Cancelar</button>
+  <button matButton class="btn-eliminar" type="button" (click)="onConfirm()" cdkFocusInitial>Eliminar</button>
+</mat-dialog-actions>
+</div>

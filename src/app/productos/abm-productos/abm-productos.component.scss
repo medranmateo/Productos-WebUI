@@ -1,0 +1,30 @@
+.abm_card{
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.abm_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.abm_input {
+  width: 100%;
+}
+
+.abm_footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.abm_button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

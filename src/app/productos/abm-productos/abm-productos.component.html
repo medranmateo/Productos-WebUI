@@ -1,0 +1,54 @@
+<div class="abm flex-center">
+
+  <div class="abm_card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h1 class="mat-headline">{{ operacion }} Producto</h1>
+        </mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <form [formGroup]="productForm" class="abm_form">
+
+          <mat-form-field appearance="fill" class="abm_input">
+            <mat-label>Código</mat-label>
+            <input matInput type="text" formControlName="codigo">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="abm_input">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" formControlName="nombre">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="abm_input">
+            <mat-label>Categoría</mat-label>
+            <input matInput type="text" formControlName="categoria">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="abm_input">
+            <mat-label>Stock</mat-label>
+            <input matInput type="number" formControlName="stock">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="abm_input">
+            <mat-label>Precio</mat-label>
+            <input matInput type="number" formControlName="precio">
+          </mat-form-field>
+
+        </form>
+      </mat-card-content>
+
+      <mat-card-actions class="abm_footer flex-center">
+        <button mat-raised-button color="primary" (click)="addOrEditProduct()" [disabled]="productForm.invalid">
+          {{ operacion }}
+        </button>
+
+        <button mat-stroked-button color="warn" [routerLink]="['/listProductos']" style="margin-left: 1em;">
+          Cancelar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+</div>
